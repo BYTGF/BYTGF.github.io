@@ -1,159 +1,403 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>YAFT | Home</title>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Billy Macarius Sidhunata - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Portfolio of Billy Macarius Sidhunata - Information Systems Professional specializing in Quality Assurance and Business Analysis">
+		<meta name="keywords" content="Quality Assurance, Business Analysis, Software Testing, KNIME, Power Platform, SQL, Python">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			:root {
+				--bs-secondary-bg: #f8f9fa;
+				--bs-dark-text: #212529;
+				--bs-card-bg: #ffffff;
+			}
+			
+			/* Background Colors */
+			.main.style1, 
+			.main.style1.special,
+			.main.style2.special,
+			.main.style2 {
+				background-color: var(--bs-secondary-bg);
+			}
+			
+			/* Text Colors */
+			body, .project-card, .highlight-box,
+			.major h2, .major p {
+				color: var(--bs-dark-text);
+			}
+			
+			.project-card {
+				background-color: var(--bs-card-bg);
+			}
+			
+			/* Custom Animations */
+			.float-animation {
+				animation: float 6s ease-in-out infinite;
+			}
+			@keyframes float {
+				0% { transform: translateY(0px); }
+				50% { transform: translateY(-10px); }
+				100% { transform: translateY(0px); }
+			}
+			
+			/* Skill Badges */
+			.skill-badge {
+				display: inline-block;
+				padding: 0.4rem 0.8rem;
+				margin: 0.3rem;
+				background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+				color: white;
+				border-radius: 20px;
+				font-size: 0.8rem;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+				transition: all 0.3s ease;
+			}
+			.skill-badge:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+			}
+			
+			/* Profile Image Adjustments */
+			.profile-image-container {
+				width: 70%;
+				margin: 0 auto;
+				padding-top: 2rem;
+			}
+			.profile-image {
+				border-radius: 50%;
+				border: 5px solid white;
+				box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+			}
+			
+			/* Content Focus */
+			.about-content {
+				padding-right: 2rem;
+			}
+			
+			/* Project Cards */
+			.project-card {
+				transition: all 0.3s ease;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+				border-radius: 8px;
+				padding: 1.5rem;
+				height: 100%;
+				background: var(--bs-card-bg);
+				color: var(--bs-dark-text);
+			}
+			.project-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+			}
+			
+			/* Video Container */
+			.video-container {
+				position: relative;
+				padding-bottom: 56.25%;
+				height: 0;
+				overflow: hidden;
+				border-radius: 8px;
+				box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+				margin-bottom: 1.5rem;
+			}
+			.video-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+			
+			/* Header Section */
+			#header {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+			}
+			
+			/* Section Headings */
+			.major h2 {
+				color: var(--bs-dark-text);
+			}
+			
+			/* Force black text in all cards */
+			.project-card,
+			.project-card h3,
+			.project-card h4,
+			.project-card p,
+			.project-card ul,
+			.project-card li {
+				color: var(--bs-dark-text) !important;
+			}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+			.video-container {
+				position: relative;
+				padding-bottom: 56.25%; /* 16:9 aspect ratio */
+				height: 0;
+				overflow: hidden;
+				margin-bottom: 1.5rem;
+				border-radius: 8px;
+				box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+			}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+			.video-container video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
-</head>
-  <body class="d-flex flex-column min-vh-100" style="font-family:'Poppins' ;">
-<!-- header start-->
-    <header class="mb-3">
-<!-- navbar start -->
-        <nav class="bg-primary">
-            <div class="navbar container-lg container-fluid-md navbar-expand-lg bg-primary navbar-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="profile.html">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="program.html">Program</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="kegiatan.html">Kegiatan</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-<!-- navbar end -->
-        <section class="hero mx-auto mb-2" >
-            <img class="w-100 hero-img" style="height: 100vh;object-fit:cover;" src="https://th.bing.com/th/id/R.f93e5c9bf79b4e618393539684f9e74e?rik=OIc9awJlF4rcJw&riu=http%3a%2f%2feskipaper.com%2fimages%2fmachine-wallpaper-13.jpg&ehk=S753svRZNeKcf9RGtFSs%2bJDNMvSANjKtk4jESSxRpVY%3d&risl=&pid=ImgRaw&r=0" alt="HeroImage">
-        </section>
-    </header>
-<!-- header start-->
+		<!-- Header -->
+		<section id="header">
+			<div class="inner header-content">
+				<h1 class="animate__animated animate__fadeInDown">Hi, I'm <strong>Billy Macarius Sidhunata</strong></h1>
+				<p class="animate__animated animate__fadeIn animate__delay-1s">Information Systems Professional | Quality Assurance | Business Analysis</p>
+				<ul class="actions special animate__animated animate__fadeInUp animate__delay-1s">
+					<li><a href="#one" class="button scrolly">View My Work</a></li>
+					<li><a href="CV_Billy_QA.pdf" download="Billy_Sidhunata_QA_CV.pdf" class="button primary">Download QA CV</a></li>
+					<li><a href="CV_Billy_BA.pdf" download="Billy_Sidhunata_BA_CV.pdf" class="button primary">Download BA CV</a></li>
+				</ul>
+			</div>
+		</section>
 
+		<!-- About Me -->
+		<section id="one" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-8 col-12-medium about-content">
+						<header class="major">
+							<h2>About Me</h2>
+						</header>
+						<p>Information Systems graduate with a 3.88 GPA from Atma Jaya Catholic University, specializing in Software Engineering. I bridge technical solutions with business needs through my dual expertise in quality assurance and business analysis.</p>
+						
+						<p>My professional journey includes impactful internships at PT Bank Central Asia, where I enhanced Power Platform tools, and PT Tunas Ridean, where I automated workflows using KNIME. At Lawencon International, I developed my QA skills documenting SIT results.</p>
+						
+						<div class="highlight-box">
+							<h3>Technical Proficiencies</h3>
+							<div>
+								<span class="skill-badge"><i class="fas fa-cogs"></i> KNIME Automation</span>
+								<span class="skill-badge"><i class="fas fa-bolt"></i> Power Platform</span>
+								<span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+								<span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+								<span class="skill-badge"><i class="fas fa-code"></i> JavaScript</span>
+								<span class="skill-badge"><i class="fas fa-check-circle"></i> QA Processes</span>
+								<span class="skill-badge"><i class="fas fa-project-diagram"></i> Business Analysis</span>
+							</div>
+						</div>
+						
+						<p>I approach problems with both technical precision and business acumen, always seeking to optimize processes while ensuring system reliability. My academic excellence (GPA 3.88/4.00) reflects my dedication to continuous learning.</p>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="profile-image-container float-animation">
+							<img src="images/profile.jpg" class="profile-image" alt="Billy's Profile Photo" style="width:100%; max-width:300px;" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<!-- main content start-->
-    <main>
-        <section data-aos="fade-down" class="info1 bg-primary text-light mb-4 p-2">
-          <article class="container">
-            <h2 class="mx-auto text-center">Yayasan Alumni Fakultas Teknik Atmajaya</h2>
-            <p class="mx-auto text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium, porro quibusdam beatae laboriosam natus soluta at quidem perferendis? Dicta consequuntur corporis, asperiores sequi magni eaque necessitatibus nihil magnam voluptate!</p>
-          </article>
-            
-        </section>
+		<!-- Skills -->
+		<section id="two" class="main style2">
+			<div class="container">
+				<header class="major">
+					<h2>Technical Skills</h2>
+				</header>
+				<div class="row gtr-150">
+					<div class="col-4 col-12-medium">
+						<div class="project-card">
+							<h3><i class="fas fa-bug"></i> Quality Assurance</h3>
+							<ul>
+								<li>System Integration Testing (SIT)</li>
+								<li>Test case design & review</li>
+								<li>Bug tracking & reporting</li>
+								<li>Test automation principles</li>
+								<li>Process documentation</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="project-card">
+							<h3><i class="fas fa-chart-line"></i> Business Analysis</h3>
+							<ul>
+								<li>Requirements gathering</li>
+								<li>UI/UX mockups</li>
+								<li>Process optimization</li>
+								<li>Workflow documentation</li>
+								<li>Stakeholder communication</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="project-card">
+							<h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+							<ul>
+								<li>KNIME Analytics Platform</li>
+								<li>Microsoft Power Platform</li>
+								<li>SQL for data validation</li>
+								<li>Python for automation</li>
+								<li>HTML/CSS/JavaScript</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <section data-aos="fade-down" class="info2 bg-light text-primary mb-2 ">
-          <article class="container">
-            <h2 class="mx-auto text-center">Yayasan Alumni Fakultas Teknik Atmajaya</h2>
-            <p class="mx-auto text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium, porro quibusdam beatae laboriosam natus soluta at quidem perferendis? Dicta consequuntur corporis, asperiores sequi magni eaque necessitatibus nihil magnam voluptate!</p>
-          </article>
-        </section>
-    </main>
+		<!-- Experience -->
+		<section id="three" class="main style1 special">
+			<div class="container">
+				<header class="major">
+					<h2>Professional Experience</h2>
+				</header>
+				<div class="row gtr-150">
+					<div class="col-4 col-12-medium">
+						<div class="project-card">
+							<h3>PT Bank Central Asia</h3>
+							<h4>Business Analyst Intern</h4>
+							<p class="experience-date">Feb 2024 - Feb 2025</p>
+							<ul>
+								<li>Gathered and analyzed business requirements for internal applications</li>
+								<li>Created UI/UX mockups and user stories</li>
+								<li>Enhanced Power Platform tools to meet business needs</li>
+								<li>Collaborated with cross-functional teams</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="project-card">
+							<h3>PT Tunas Ridean</h3>
+							<h4>Data Analyst Intern</h4>
+							<p class="experience-date">Mar 2025 - Jul 2025</p>
+							<ul>
+								<li>Automated accounting workflows using KNIME</li>
+								<li>Performed workload analysis for process optimization</li>
+								<li>Ensured data alignment with accounting standards</li>
+								<li>Reduced manual effort through automation</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="project-card">
+							<h3>Lawencon International</h3>
+							<h4>Quality Assurance</h4>
+							<p class="experience-date">Aug 2022 - Oct 2022</p>
+							<ul>
+								<li>Documented System Integration Testing (SIT) results</li>
+								<li>Supported feature testing during development</li>
+								<li>Collaborated with development teams on defect resolution</li>
+								<li>Maintained testing documentation</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- Project Videos -->
+		<!-- Project Videos -->
+		<section id="videos" class="main style2">
+			<div class="container">
+				<header class="major">
+					<h2>Project Demonstrations</h2>
+					<p>See my work in action</p>
+				</header>
+				
+				<div class="box alt">
+					<div class="row gtr-uniform">
+						<div class="col-6 col-12-medium">
+							<h3>Apex Oracle</h3>
+							<div class="video-container">
+								<video controls poster="images/pic06.jpg" style="width:100%;">
+									<source src="videos/oracle.mp4" type="video/mp4">
+									Your browser does not support HTML5 video.
+								</video>
+							</div>
+							<p>Demonstration of an inventory management system built using apex oracle</p>
+						</div>
+						
+						<div class="col-6 col-12-medium">
+							<h3>Web Development</h3>
+							<div class="video-container">
+								<video controls poster="images/pic05.jpg" style="width:100%;">
+									<source src="videos/haus.mp4" type="video/mp4">
+									Your browser does not support HTML5 video.
+								</video>
+							</div>
+							<p>Overview of a Project to Help Decision Making in a Brand.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<!-- main content end-->
+		<!-- Education -->
+		<section id="four" class="main style2 special">
+			<div class="container">
+				<header class="major">
+					<h2>Education</h2>
+				</header>
+				<div class="box alt">
+					<div class="row gtr-uniform gtr-50">
+						<div class="col-6">
+							<div class="project-card" style="height:100%;">
+								<h3>ATMA JAYA CATHOLIC UNIVERSITY</h3>
+								<p><strong>Bachelor's Degree in Information System</strong><br>
+								Specialization in Software Engineering<br>
+								GPA: 3.88/4.00<br>
+								August 2021 – January 2025</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="project-card" style="height:100%;">
+								<h3>CANISIUS COLLEGE</h3>
+								<p><strong>Science Program</strong><br>
+								GPA: 84.87%<br>
+								August 2018 – April 2021</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<header class="major">
+					<h2>Get In Touch</h2>
+				</header>
+				<p>I'm always interested in hearing about new opportunities and collaborations.</p>
+				<ul class="icons">
+					<li><a href="mailto:billyms1203@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/billy-macarius-sidhunata/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/BYTGF" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon solid alt fa-phone"><span class="label">Phone</span></a></li>
+				</ul>
+				<ul class="actions special">
+					<li><a href="CV_Billy_QA.pdf" download="Billy_Sidhunata_QA_CV.pdf" class="button primary">Download QA CV</a></li>
+					<li><a href="CV_Billy_BA.pdf" download="Billy_Sidhunata_BA_CV.pdf" class="button primary">Download BA CV</a></li>
+				</ul>
+			</div>
+			<ul class="copyright">
+				<li>&copy; Billy Macarius Sidhunata</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</section>
 
-<!-- footer start-->
-    <footer  class="mt-auto bg-primary text-white text-center text-md-start">
-        <!-- Grid container -->
-        <div class="container p-4">
-          <!--Grid row-->
-          <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer Content</h5>
-    
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
-            </div>
-            <!--Grid column-->
-    
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-    
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
-    
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
-    
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </div>
-        <!-- Grid container -->
-    
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2020 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
-<!-- footer end-->
-
-<!-- script -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script>
-        AOS.init();
-    </script>  
-</body>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>
